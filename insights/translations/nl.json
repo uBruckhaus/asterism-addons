@@ -1,0 +1,18 @@
+{
+ "Claude Code is not installed.": "Claude Code is niet geïnstalleerd.",
+ "Claude is writing…": "Claude schrijft…",
+ "No answer from Claude Code.": "Geen antwoord van Claude Code.",
+ "Only these titles and numbers go to Claude, not your conversations.": "Alleen deze titels en cijfers gaan naar Claude, niet je gesprekken.",
+ "Send": "Versturen",
+ "Send this to Claude Code?": "Dit naar Claude Code sturen?",
+ "Sends the titles and numbers above (no conversations) to Claude Code and shows what it writes. Uses some tokens.": "Stuurt de titels en cijfers hierboven (geen gesprekken) naar Claude Code en toont wat het schrijft. Kost wat tokens.",
+ "Summarize with Claude…": "Samenvatten met Claude…",
+ "Topics, last 30 days": "Onderwerpen, laatste 30 dagen",
+ "Unknown folder": "Onbekende map",
+ "Untitled session": "Sessie zonder titel",
+ "{0} tokens": "{0} tokens",
+ "\u00041 session": [
+  "1 sessie",
+  "{0} sessies"
+ ]
+}

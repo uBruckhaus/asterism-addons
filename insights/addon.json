@@ -1,0 +1,24 @@
+{
+  "id": "insights",
+  "name": "Insights",
+  "version": "1.0.0",
+  "api": 1,
+  "kind": "feature",
+  "icon": "view-list-bullet-symbolic",
+  "summary": "Session topics per project and a summary of your month by Claude",
+  "description": "Lists the sessions of Claude Code, OpenCode and Hermes under the titles the agents gave them themselves, per project, on each agent's details page. Summarize with Claude… writes a few paragraphs about what you mainly worked on in the last 30 days: after you saw and confirmed exactly what goes out, the titles and numbers (never your conversations) go to your own Claude Code.",
+  "privacy": "summary",
+  "capabilities": [],
+  "harnesses": [
+    "claude",
+    "opencode",
+    "hermes"
+  ],
+  "reads": [
+    "The titles Claude Code, OpenCode and Hermes gave their sessions themselves (Claude Code's ai-title lines in ~/.claude/projects; the title column of OpenCode's and Hermes's databases, read-only)",
+    "The session numbers Asterism already shows (projects, times, tokens)"
+  ],
+  "sends": [
+    "Only when you click Summarize with Claude… and confirm the preview: those titles and numbers, never the conversations, to your own Claude Code (claude -p in plan mode, no MCP servers, no saved session)"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+ "Claude Code is not installed.": "Claude Code no está instalado.",
+ "Claude is writing…": "Claude está escribiendo…",
+ "No answer from Claude Code.": "Sin respuesta de Claude Code.",
+ "Only these titles and numbers go to Claude, not your conversations.": "Solo estos títulos y cifras van a Claude, no tus conversaciones.",
+ "Send": "Enviar",
+ "Send this to Claude Code?": "¿Enviar esto a Claude Code?",
+ "Sends the titles and numbers above (no conversations) to Claude Code and shows what it writes. Uses some tokens.": "Envía los títulos y cifras de arriba (sin conversaciones) a Claude Code y muestra lo que escribe. Usa algunos tokens.",
+ "Summarize with Claude…": "Resumir con Claude…",
+ "Topics, last 30 days": "Temas, últimos 30 días",
+ "Unknown folder": "Carpeta desconocida",
+ "Untitled session": "Sesión sin título",
+ "{0} tokens": "{0} tokens",
+ "\u00041 session": [
+  "1 sesión",
+  "{0} sesiones"
+ ]
+}
