@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 REPO = "https://github.com/uBruckhaus/asterism-addons"
 FIELDS = ("id", "name", "version", "api", "kind", "icon", "summary", "description", "privacy", "capabilities",
-          "harnesses", "reads", "sends", "detect")
+          "harnesses", "reads", "sends", "detect", "homepage", "needs", "provides")
 entries = []
 for meta_file in sorted(ROOT.glob("*/addon.json")):
     meta = json.loads(meta_file.read_text())
