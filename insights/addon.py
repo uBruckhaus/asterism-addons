@@ -5,6 +5,8 @@ of the last 30 days by the user's own Claude Code.
   lines in ~/.claude/projects/**/*.jsonl are parsed (bounded and incremental, own regular files, no
   links), cached owner-only in this add-on's cache folder. OpenCode and Hermes: the id and title
   columns of their own databases, read-only. Shown as plain text.
+- Topics: sessions with the same title together, ranked by their tokens (input, output and cache
+  writes from the harness's own session numbers, as Asterism counts them; cache reads apart).
 - Summarize with Claude…: only on a click, after a preview of exactly the text that goes out: the
   titles and numbers (never the conversations) go on stdin to the user's own `claude -p`, which runs
   in plan mode, without MCP servers, without saving a session, in an empty temporary folder, with a
@@ -31,6 +33,7 @@ MAX_DIRS = 500
 MAX_BYTES = 2 * 1024 ** 3          # per run; the rest is read next time
 MAX_CACHE = 16 * 1024 * 1024
 MAX_ROWS = 20000
+TOP_TOPICS = 8
 _TITLE = b'"ai-title"'             # a quick pre-filter; json decides
 _SID_CHARS = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-")
 
@@ -149,6 +152,32 @@ def db_titles(db, sql: str) -> dict:
     return {str(sid): clean_title(title) for sid, title in rows if clean_title(title)}
 
 
+# --- topics ---------------------------------------------------------------------------------------------
+
+def session_tokens(session) -> int:
+    """Input, output and cache writes (cache reads apart), as Asterism's usage card counts them."""
+    return sum(c[0] + c[1] + c[3] for c in session.tokens.values())
+
+
+def topics(sessions: dict, titles: dict, since: float) -> tuple:
+    """(topics by tokens, all tokens) of the sessions since `since`: sessions with the same title (case
+    and spaces aside) are one topic; untitled ones are one together (title None)."""
+    groups: dict = {}
+    for sid, s in sessions.items():
+        if s.last < since:
+            continue
+        title = titles.get(sid) or ""
+        group = groups.setdefault(" ".join(title.casefold().split()), {
+            "title": title or None, "tokens": 0, "active": 0.0, "sessions": 0, "folders": set(), "last": 0.0})
+        group["tokens"] += session_tokens(s)
+        group["active"] += s.active
+        group["sessions"] += 1
+        group["folders"].add(s.cwd or "?")
+        group["last"] = max(group["last"], s.last)
+    ranked = sorted(groups.values(), key=lambda g: (-g["tokens"], -g["last"]))
+    return ranked, sum(g["tokens"] for g in ranked)
+
+
 # --- the summary -------------------------------------------------------------------------------------
 
 def summary_text(sessions: dict, titles: dict, since: float, name: str, tilde=str) -> str:
@@ -165,7 +194,7 @@ def summary_text(sessions: dict, titles: dict, since: float, name: str, tilde=st
         lines.append("")
         lines.append(f"Project {tilde(cwd)}:")
         for sid, s in sorted(items, key=lambda item: -item[1].last):
-            tokens = sum(c[0] + c[1] + c[3] for c in s.tokens.values())
+            tokens = session_tokens(s)
             day = datetime.fromtimestamp(s.last).strftime("%Y-%m-%d")
             lines.append(f"- {titles.get(sid, 'untitled')} ({day}, {round(s.active / 60)} min, {tokens} tokens)")
     return "\n".join(lines)[:MAX_SUMMARY_INPUT]
@@ -193,6 +222,26 @@ def show(api, ui, box, harness, sessions: dict, titles: dict, since: float):
     if not recent:
         return
     ui.heading(box, api.tr("Topics, last 30 days"))
+    ranked, total = topics(recent, titles, since)
+    if total:
+        ui.heading(box, api.tr("Most tokens"))
+        top = ui.boxed_list()
+        for topic in ranked[:TOP_TOPICS]:
+            folders = sorted(topic["folders"])
+            where = api.trn("1 folder", "{0} folders", len(folders)).format(len(folders)) if len(folders) > 1 \
+                else ui.tilde(folders[0]) if folders[0] != "?" else api.tr("Unknown folder")
+            percent = 100 * topic["tokens"] / total
+            top.append(ui.share_row(
+                topic["title"] or api.tr("Untitled sessions"),
+                " · ".join([where, api.trn("1 session", "{0} sessions", topic["sessions"]).format(topic["sessions"]),
+                            ui.duration_text(topic["active"])]),
+                api.tr("{0} tokens · {1} %").format(ui.short_number(topic["tokens"]),
+                                                    "<1" if 0 < percent < 1 else round(percent)),
+                topic["tokens"] / ranked[0]["tokens"]))            # the bar: next to the top topic
+        box.append(top)
+        ui.note(box, api.tr("Tokens: input, output and cache writes, from {0}'s own session files; cache reads "
+                            "are not counted. Sessions with the same title are one topic.").format(harness.name))
+        ui.heading(box, api.tr("By project"))
     listbox = ui.boxed_list()
     by_project: dict = {}
     for sid, s in recent.items():
@@ -201,7 +250,7 @@ def show(api, ui, box, harness, sessions: dict, titles: dict, since: float):
         expander = ui.expander_row(ui.tilde(cwd) if cwd != "?" else api.tr("Unknown folder"),
                                    api.trn("1 session", "{0} sessions", len(items)).format(len(items)))
         for sid, s in sorted(items, key=lambda item: -item[1].last)[:30]:
-            tokens = sum(c[0] + c[1] + c[3] for c in s.tokens.values())
+            tokens = session_tokens(s)
             expander.add_row(ui.plain_row(titles.get(sid) or api.tr("Untitled session"),
                                           " · ".join([ui.duration_text(s.active),
                                                       api.tr("{0} tokens").format(ui.short_number(tokens))])))

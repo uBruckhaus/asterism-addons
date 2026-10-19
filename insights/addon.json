@@ -1,12 +1,13 @@
 {
   "id": "insights",
   "name": "Insights",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "api": 1,
+  "needs": "asterism >= 0.8.0",
   "kind": "feature",
   "icon": "view-list-bullet-symbolic",
   "summary": "Session topics per project and a summary of your month by Claude",
-  "description": "Lists the sessions of Claude Code, OpenCode and Hermes under the titles the agents gave them themselves, per project, on each agent's details page. Summarize with Claude… writes a few paragraphs about what you mainly worked on in the last 30 days: after you saw and confirmed exactly what goes out, the titles and numbers (never your conversations) go to your own Claude Code.",
+  "description": "Lists the sessions of Claude Code, OpenCode and Hermes under the titles the agents gave them themselves, per project, on each agent's details page, and which topics used the most tokens. Summarize with Claude… writes a few paragraphs about what you mainly worked on in the last 30 days: after you saw and confirmed exactly what goes out, the titles and numbers (never your conversations) go to your own Claude Code.",
   "privacy": "summary",
   "capabilities": [],
   "harnesses": [

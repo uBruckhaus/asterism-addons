@@ -78,6 +78,29 @@ class DatabaseTitlesTest(unittest.TestCase):
         self.assertEqual(ins.db_titles(None, ins.OPENCODE_SQL), {})
 
 
+class TopicsTest(unittest.TestCase):
+    def test_same_title_is_one_topic_ranked_by_tokens(self):
+        now = time.time()
+        sessions = {
+            "a": cs.Session(cwd="/p", last=now, active=60, tokens={"m": [100, 50, 9999, 10]}),   # 160: cache reads apart
+            "b": cs.Session(cwd="/q", last=now - 5, active=30, tokens={"m": [40, 0, 0, 0]}),
+            "c": cs.Session(cwd="/p", last=now, active=10, tokens={"m": [500, 0, 0, 0]}),
+            "d": cs.Session(cwd="/p", last=now, active=10, tokens={"m": [7, 0, 0, 0]}),
+            "e": cs.Session(cwd="/p", last=now, active=10, tokens={"m": [70, 0, 0, 0]}),
+            "old": cs.Session(cwd="/p", last=now - 40 * 86400, tokens={"m": [10 ** 6, 0, 0, 0]}),
+        }
+        titles = {"a": "Fix the map", "b": "fix  the MAP", "c": "Manual", "old": "Manual"}
+        ranked, total = ins.topics(sessions, titles, now - 30 * 86400)
+        self.assertEqual(total, 160 + 40 + 500 + 7 + 70)                  # the old session is out
+        self.assertEqual([(t["title"], t["tokens"]) for t in ranked],
+                         [("Manual", 500), ("Fix the map", 200), (None, 77)])
+        fix = ranked[1]
+        self.assertEqual((fix["sessions"], fix["active"], fix["folders"]), (2, 90, {"/p", "/q"}))
+
+    def test_no_sessions_no_topics(self):
+        self.assertEqual(ins.topics({}, {}, 0), ([], 0))
+
+
 class SummaryTest(unittest.TestCase):
     def test_titles_and_numbers_only(self):
         now = time.time()
@@ -123,7 +146,8 @@ class LoadsInAsterismTest(unittest.TestCase):
             self.assertTrue(addons.signature_ok((copy / "catalog.json").read_bytes(), (copy / "catalog.sig").read_bytes(),
                                                 signers))
             import zipfile
-            zipfile.ZipFile(copy / "dist/insights-1.0.0.zip").extractall(tmp / "installed")
+            version = json.loads((ROOT / "insights/addon.json").read_text())["version"]
+            zipfile.ZipFile(copy / f"dist/insights-{version}.zip").extractall(tmp / "installed")
             addon = addons.verify(tmp / "installed/insights", signers)
             self.assertEqual((addon.state, addon.name), ("verified", "Insights"))
             hooks = addon_api.Hooks()

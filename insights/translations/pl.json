@@ -15,5 +15,15 @@
   "1 sesja",
   "{0} sesje",
   "{0} sesji"
+ ],
+ "Most tokens": "Najwięcej tokenów",
+ "By project": "Według projektu",
+ "Untitled sessions": "Sesje bez tytułu",
+ "{0} tokens · {1} %": "{0} tokenów · {1} %",
+ "Tokens: input, output and cache writes, from {0}'s own session files; cache reads are not counted. Sessions with the same title are one topic.": "Tokeny: wejście, wyjście i zapisy do pamięci podręcznej, z własnych plików sesji {0}; odczyty z pamięci podręcznej nie są liczone. Sesje o tym samym tytule to jeden temat.",
+ "\u00041 folder": [
+  "1 folder",
+  "{0} foldery",
+  "{0} folderów"
  ]
 }

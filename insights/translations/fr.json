@@ -14,5 +14,14 @@
  "\u00041 session": [
   "{0} session",
   "{0} sessions"
+ ],
+ "Most tokens": "Le plus de jetons",
+ "By project": "Par projet",
+ "Untitled sessions": "Sessions sans titre",
+ "{0} tokens · {1} %": "{0} jetons · {1} %",
+ "Tokens: input, output and cache writes, from {0}'s own session files; cache reads are not counted. Sessions with the same title are one topic.": "Jetons : entrée, sortie et écritures en cache, d'après les fichiers de session de {0} ; les lectures en cache ne comptent pas. Les sessions de même titre forment un seul sujet.",
+ "\u00041 folder": [
+  "1 dossier",
+  "{0} dossiers"
  ]
 }

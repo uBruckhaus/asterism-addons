@@ -14,5 +14,14 @@
  "\u00041 session": [
   "1 Sitzung",
   "{0} Sitzungen"
+ ],
+ "Most tokens": "Die meisten Tokens",
+ "By project": "Nach Projekt",
+ "Untitled sessions": "Sitzungen ohne Titel",
+ "{0} tokens · {1} %": "{0} Tokens · {1} %",
+ "Tokens: input, output and cache writes, from {0}'s own session files; cache reads are not counted. Sessions with the same title are one topic.": "Tokens: Eingabe, Ausgabe und Cache-Schreibvorgänge, aus den eigenen Sitzungsdateien von {0}; Cache-Lesevorgänge zählen nicht mit. Sitzungen mit demselben Titel sind ein Thema.",
+ "\u00041 folder": [
+  "1 Ordner",
+  "{0} Ordner"
  ]
 }
