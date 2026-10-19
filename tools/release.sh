@@ -8,7 +8,9 @@ id=${1:?usage: tools/release.sh <add-on id>}
 key=${KEY:-$HOME/.ssh/asterism-addons}
 [ -f "$id/addon.json" ] || { echo "no add-on $id" >&2; exit 1; }
 version=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1]))['version'])" "$id/addon.json")
-# 1. the signed list of files (every file but the list and the signature)
+# 1. the signed list of files (every file but the list and the signature; Python's caches go first:
+#    the app refuses an add-on with a file the list does not need)
+find "$id" -name __pycache__ -type d -prune -exec rm -rf {} +
 ( cd "$id" && rm -f MANIFEST.sha256 SIGNATURE &&
   find . -type f ! -name MANIFEST.sha256 ! -name SIGNATURE | sed 's|^\./||' | LC_ALL=C sort |
   while read -r f; do sha256sum "$f"; done > MANIFEST.sha256 )

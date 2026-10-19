@@ -21,6 +21,7 @@ import addon_api  # noqa: E402
 import addons  # noqa: E402
 import claude_sessions as cs  # noqa: E402
 
+sys.dont_write_bytecode = True        # no __pycache__ inside the add-on folder: it would be signed into it
 spec = importlib.util.spec_from_file_location("insights", ROOT / "insights/addon.py")
 ins = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(ins)
