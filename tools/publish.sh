@@ -6,6 +6,16 @@
 set -eu
 cd "$(dirname "$0")/.."
 [ -f catalog.json ] && [ -f catalog.sig ] || { echo "no signed catalog: run tools/release.sh first" >&2; exit 1; }
+# Every older version legacy.json keeps must be in the catalog: else older Asterism releases would be
+# offered versions they cannot load.
+python3 - <<'PY'
+import json, sys
+keep = json.load(open("legacy.json"))["keep"]
+listed = {f"{e['id']}-{e['version']}" for e in json.load(open("catalog.json"))["addons"]}
+missing = [name for name in keep if name not in listed]
+if missing:
+    sys.exit("not in catalog.json yet: " + ", ".join(missing) + " (tools/release-old.sh, then tools/release.sh)")
+PY
 for zip in dist/*.zip; do
     tag=$(basename "$zip" .zip)
     if gh release view "$tag" >/dev/null 2>&1; then
