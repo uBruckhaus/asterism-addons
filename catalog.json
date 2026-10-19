@@ -1430,34 +1430,6 @@
       "sha256": "83310ce726b5fb08677be8a5564a0739ebcab60ddc741baadfbef86e5c35af0f"
     },
     {
-      "id": "insights",
-      "name": "Insights",
-      "version": "1.1.0",
-      "api": 1,
-      "kind": "feature",
-      "icon": "view-list-bullet-symbolic",
-      "summary": "Session topics per project and a summary of your month by Claude",
-      "description": "Lists the sessions of Claude Code, OpenCode and Hermes under the titles the agents gave them themselves, per project, on each agent's details page, and which topics used the most tokens. Summarize with Claude… writes a few paragraphs about what you mainly worked on in the last 30 days: after you saw and confirmed exactly what goes out, the titles and numbers (never your conversations) go to your own Claude Code.",
-      "privacy": "summary",
-      "capabilities": [],
-      "harnesses": [
-        "claude",
-        "opencode",
-        "hermes"
-      ],
-      "reads": [
-        "The titles Claude Code, OpenCode and Hermes gave their sessions themselves (Claude Code's ai-title lines in ~/.claude/projects; the title column of OpenCode's and Hermes's databases, read-only)",
-        "The session numbers Asterism already shows (projects, times, tokens)"
-      ],
-      "sends": [
-        "Only when you click Summarize with Claude… and confirm the preview: those titles and numbers, never the conversations, to your own Claude Code (claude -p in plan mode, no MCP servers, no saved session)"
-      ],
-      "needs": "asterism >= 0.8.0",
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/insights-1.1.0/insights-1.1.0.zip",
-      "size": 12450,
-      "sha256": "b29a4ed59ecad6997e9b12ce95aeef8bc4bcfd70e5db367c2cbf0089c608eec3"
-    },
-    {
       "id": "llm-jan",
       "name": "Jan",
       "version": "0.8.0",
@@ -1693,6 +1665,853 @@
       "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/providers-online-0.8.0/providers-online-0.8.0.zip",
       "size": 1917,
       "sha256": "4a88bfa32ee0ee3108d5d8dd214facc3fab54c9bd5f19490b7a58cc005a44e13"
+    },
+    {
+      "id": "agent-agy",
+      "name": "Antigravity CLI",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Antigravity CLI on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Antigravity CLI: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent",
+        "installer"
+      ],
+      "harnesses": [
+        "agy"
+      ],
+      "reads": [
+        "Antigravity CLI's own settings and session files (its folders)"
+      ],
+      "detect": {
+        "commands": [
+          "agy"
+        ],
+        "paths": []
+      },
+      "homepage": "https://antigravity.google",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "agy"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-agy-0.9.0/agent-agy-0.9.0.zip",
+      "size": 1448,
+      "sha256": "44436073e40741c688afb14eb6e29ea9a9cec84f40e682f5ecbc5030becd61fd"
+    },
+    {
+      "id": "agent-bionic",
+      "name": "LM Studio Bionic",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "LM Studio Bionic on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism LM Studio Bionic: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent",
+        "installer"
+      ],
+      "harnesses": [
+        "bionic"
+      ],
+      "reads": [
+        "LM Studio Bionic's own settings and session files (~/.lmstudio/apps/bionic)"
+      ],
+      "detect": {
+        "commands": [
+          "bionic"
+        ],
+        "paths": [
+          "~/.lmstudio/apps/bionic"
+        ]
+      },
+      "homepage": "https://lmstudio.ai",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "bionic"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-bionic-0.9.0/agent-bionic-0.9.0.zip",
+      "size": 1647,
+      "sha256": "aa0867bbed61d5fd54619ebe38a2bce66ce000d919b25a4683bb063c14882ead"
+    },
+    {
+      "id": "agent-claude",
+      "name": "Claude Code",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Claude Code on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Claude Code: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent",
+        "updater"
+      ],
+      "harnesses": [
+        "claude"
+      ],
+      "reads": [
+        "Claude Code's own settings and session files (~/.claude, ~/.claude.json)"
+      ],
+      "detect": {
+        "commands": [
+          "claude"
+        ],
+        "paths": [
+          "~/.claude",
+          "~/.claude.json"
+        ]
+      },
+      "homepage": "https://github.com/anthropics/claude-code",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "claude"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-claude-0.9.0/agent-claude-0.9.0.zip",
+      "size": 3006,
+      "sha256": "60c6abd4b25cc756e9bdbc85e985b032f03b9fbbcdcfedc9bb38eb98328aabcc"
+    },
+    {
+      "id": "agent-codex",
+      "name": "Codex",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Codex on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Codex: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "codex"
+      ],
+      "reads": [
+        "Codex's own settings and session files (~/.codex)"
+      ],
+      "detect": {
+        "commands": [
+          "codex"
+        ],
+        "paths": [
+          "~/.codex"
+        ]
+      },
+      "homepage": "https://github.com/openai/codex",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "codex"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-codex-0.9.0/agent-codex-0.9.0.zip",
+      "size": 2605,
+      "sha256": "6a1ee20706b2fb1bd2e8f4ac08a2370e227ed2bc1006204a354da2f6f64ccc59"
+    },
+    {
+      "id": "agent-copilot",
+      "name": "GitHub Copilot",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "GitHub Copilot on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism GitHub Copilot: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "copilot"
+      ],
+      "reads": [
+        "GitHub Copilot's own settings and session files (~/.copilot)"
+      ],
+      "detect": {
+        "commands": [
+          "copilot"
+        ],
+        "paths": [
+          "~/.copilot"
+        ]
+      },
+      "homepage": "https://github.com/github/copilot-cli",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "copilot"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-copilot-0.9.0/agent-copilot-0.9.0.zip",
+      "size": 2049,
+      "sha256": "df6d082f6f927842265c5bc215e8fe7494fd469b3361729832a768b7fb931fd8"
+    },
+    {
+      "id": "agent-crush",
+      "name": "Crush",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Crush on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Crush: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "crush"
+      ],
+      "reads": [
+        "Crush's own settings and session files (~/.config/crush, ~/.local/share/crush)"
+      ],
+      "detect": {
+        "commands": [
+          "crush"
+        ],
+        "paths": [
+          "~/.config/crush",
+          "~/.local/share/crush"
+        ]
+      },
+      "homepage": "https://github.com/charmbracelet/crush",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "crush"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-crush-0.9.0/agent-crush-0.9.0.zip",
+      "size": 1726,
+      "sha256": "b958e2a44a61b3883b83b3bf67422f91e2fe0ab2497066653dee6741bd0444c1"
+    },
+    {
+      "id": "agent-cursor-agent",
+      "name": "Cursor CLI",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Cursor CLI on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Cursor CLI: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "cursor-agent"
+      ],
+      "reads": [
+        "Cursor CLI's own settings and session files (~/.cursor, ~/.config/cursor)"
+      ],
+      "detect": {
+        "commands": [
+          "cursor-agent"
+        ],
+        "paths": [
+          "~/.cursor",
+          "~/.config/cursor"
+        ]
+      },
+      "homepage": "https://cursor.com/cli",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "cursor-agent"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-cursor-agent-0.9.0/agent-cursor-agent-0.9.0.zip",
+      "size": 2426,
+      "sha256": "37199cf2a91ac277f1fb049084b979fba26e31a4f5dca7e006e283ca50715539"
+    },
+    {
+      "id": "agent-dsh",
+      "name": "DeepSeek Harness",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "DeepSeek Harness on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism DeepSeek Harness: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent",
+        "installer"
+      ],
+      "harnesses": [
+        "dsh"
+      ],
+      "reads": [
+        "DeepSeek Harness's own settings and session files (~/.dsh)"
+      ],
+      "detect": {
+        "commands": [
+          "dsh"
+        ],
+        "paths": [
+          "~/.dsh"
+        ]
+      },
+      "homepage": "https://www.npmjs.com/package/@deepseek-ai/dsh",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "dsh"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-dsh-0.9.0/agent-dsh-0.9.0.zip",
+      "size": 2182,
+      "sha256": "2a1113874e523323307e5b54b51884321aa2ba071a763c2b7988236289300710"
+    },
+    {
+      "id": "agent-gemini",
+      "name": "Gemini CLI",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Gemini CLI on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Gemini CLI: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "gemini"
+      ],
+      "reads": [
+        "Gemini CLI's own settings and session files (~/.gemini)"
+      ],
+      "detect": {
+        "commands": [
+          "gemini"
+        ],
+        "paths": [
+          "~/.gemini"
+        ]
+      },
+      "homepage": "https://github.com/google-gemini/gemini-cli",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "gemini"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-gemini-0.9.0/agent-gemini-0.9.0.zip",
+      "size": 1732,
+      "sha256": "9b31a6c29e77ed7f48b970b410493884f961e98d56a481b98c6692ad74e81ad0"
+    },
+    {
+      "id": "agent-grok",
+      "name": "Grok",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Grok on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Grok: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "grok"
+      ],
+      "reads": [
+        "Grok's own settings and session files (~/.grok)"
+      ],
+      "detect": {
+        "commands": [
+          "grok"
+        ],
+        "paths": [
+          "~/.grok"
+        ]
+      },
+      "homepage": "https://www.npmjs.com/package/@xai-official/grok",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "grok"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-grok-0.9.0/agent-grok-0.9.0.zip",
+      "size": 1603,
+      "sha256": "011f2b0d67ce0c7b688eba150858c1b7fd70c8d51b64783f83377b57203cbdd4"
+    },
+    {
+      "id": "agent-hermes",
+      "name": "Hermes",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Hermes on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Hermes: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "hermes"
+      ],
+      "reads": [
+        "Hermes's own settings and session files (~/.hermes)"
+      ],
+      "detect": {
+        "commands": [
+          "hermes"
+        ],
+        "paths": [
+          "~/.hermes"
+        ]
+      },
+      "homepage": "https://github.com/NousResearch/hermes-agent",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "hermes"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-hermes-0.9.0/agent-hermes-0.9.0.zip",
+      "size": 5436,
+      "sha256": "37157650030dbdf21ea8982998ed86401a82f562c9666890ad9fefce13c40322"
+    },
+    {
+      "id": "agent-muse",
+      "name": "Muse Code",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Muse Code on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Muse Code: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "muse"
+      ],
+      "reads": [
+        "Muse Code's own settings and session files (~/.config/muse)"
+      ],
+      "detect": {
+        "commands": [
+          "muse"
+        ],
+        "paths": [
+          "~/.config/muse"
+        ]
+      },
+      "homepage": "",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "muse"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-muse-0.9.0/agent-muse-0.9.0.zip",
+      "size": 1558,
+      "sha256": "6c283e8ec64695f326cff4fb7e2de242f050f18ed532cbd829875346876716e7"
+    },
+    {
+      "id": "agent-omp",
+      "name": "Oh My Pi",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Oh My Pi on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Oh My Pi: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "omp"
+      ],
+      "reads": [
+        "Oh My Pi's own settings and session files (~/.omp)"
+      ],
+      "detect": {
+        "commands": [
+          "omp"
+        ],
+        "paths": [
+          "~/.omp"
+        ]
+      },
+      "homepage": "https://github.com/can1357/oh-my-pi",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "omp"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-omp-0.9.0/agent-omp-0.9.0.zip",
+      "size": 1531,
+      "sha256": "2ac99d6461cc6fb8a1e2a13b1a629994c0817c7944be631ae7de746cd9b8a61b"
+    },
+    {
+      "id": "agent-openclaw",
+      "name": "OpenClaw",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "OpenClaw on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism OpenClaw: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "openclaw"
+      ],
+      "reads": [
+        "OpenClaw's own settings and session files (~/.openclaw)"
+      ],
+      "detect": {
+        "commands": [
+          "openclaw"
+        ],
+        "paths": [
+          "~/.openclaw"
+        ]
+      },
+      "homepage": "https://github.com/openclaw/openclaw",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "openclaw"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-openclaw-0.9.0/agent-openclaw-0.9.0.zip",
+      "size": 2311,
+      "sha256": "4588080e82d7c75cb1b54a0c391878359eb95596b33a2b35ea8559a42b1dc40a"
+    },
+    {
+      "id": "agent-opencode",
+      "name": "OpenCode",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "OpenCode on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism OpenCode: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "opencode"
+      ],
+      "reads": [
+        "OpenCode's own settings and session files (~/.local/share/opencode, ~/.config/opencode)"
+      ],
+      "detect": {
+        "commands": [
+          "opencode"
+        ],
+        "paths": [
+          "~/.local/share/opencode",
+          "~/.config/opencode"
+        ]
+      },
+      "homepage": "https://opencode.ai",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "opencode"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-opencode-0.9.0/agent-opencode-0.9.0.zip",
+      "size": 4206,
+      "sha256": "92c6b1760fd7c397504d818ecdf9b8eecf75a2ad574f91f859a34fae97a44598"
+    },
+    {
+      "id": "agent-pi",
+      "name": "Pi",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "agent",
+      "icon": "system-users-symbolic",
+      "summary": "Pi on the map: its models, MCP servers, skills, settings and sessions",
+      "description": "Teaches Asterism Pi: where it keeps its settings, which models, MCP servers and skills it uses, its session numbers, and how to install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "agent"
+      ],
+      "harnesses": [
+        "pi"
+      ],
+      "reads": [
+        "Pi's own settings and session files (~/.pi)"
+      ],
+      "detect": {
+        "commands": [
+          "pi"
+        ],
+        "paths": [
+          "~/.pi"
+        ]
+      },
+      "homepage": "https://github.com/badlogic/pi-mono",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "pi"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-pi-0.9.0/agent-pi-0.9.0.zip",
+      "size": 3255,
+      "sha256": "d8cc4e5ba2f0d657933f0e50b5d0bebeaf9beb55c613301b8cb5a6c8d95db56a"
+    },
+    {
+      "id": "insights",
+      "name": "Insights",
+      "version": "1.1.0",
+      "api": 1,
+      "kind": "feature",
+      "icon": "view-list-bullet-symbolic",
+      "summary": "Session topics per project and a summary of your month by Claude",
+      "description": "Lists the sessions of Claude Code, OpenCode and Hermes under the titles the agents gave them themselves, per project, on each agent's details page, and which topics used the most tokens. Summarize with Claude… writes a few paragraphs about what you mainly worked on in the last 30 days: after you saw and confirmed exactly what goes out, the titles and numbers (never your conversations) go to your own Claude Code.",
+      "privacy": "summary",
+      "capabilities": [],
+      "harnesses": [
+        "claude",
+        "opencode",
+        "hermes"
+      ],
+      "reads": [
+        "The titles Claude Code, OpenCode and Hermes gave their sessions themselves (Claude Code's ai-title lines in ~/.claude/projects; the title column of OpenCode's and Hermes's databases, read-only)",
+        "The session numbers Asterism already shows (projects, times, tokens)"
+      ],
+      "sends": [
+        "Only when you click Summarize with Claude… and confirm the preview: those titles and numbers, never the conversations, to your own Claude Code (claude -p in plan mode, no MCP servers, no saved session)"
+      ],
+      "needs": "asterism >= 0.8.0",
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/insights-1.1.0/insights-1.1.0.zip",
+      "size": 12450,
+      "sha256": "b29a4ed59ecad6997e9b12ce95aeef8bc4bcfd70e5db367c2cbf0089c608eec3"
+    },
+    {
+      "id": "llm-jan",
+      "name": "Jan",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "provider",
+      "icon": "network-server-symbolic",
+      "summary": "Jan on the map: found, installed, started and stopped here, its models",
+      "description": "Teaches Asterism the local LLM Jan: how to find it and its models, start and stop it, connect agents to it, and install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "provider",
+        "installer"
+      ],
+      "reads": [
+        "Jan's model folders and its own settings"
+      ],
+      "detect": {
+        "commands": [
+          "jan",
+          "Jan"
+        ],
+        "paths": []
+      },
+      "homepage": "https://jan.ai",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "jan"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-jan-0.9.0/llm-jan-0.9.0.zip",
+      "size": 1485,
+      "sha256": "07cdc90d2d056df701bb690845e0014307b1c43a26b40a6c22dbe6f1afcc6cf2"
+    },
+    {
+      "id": "llm-koboldcpp",
+      "name": "KoboldCpp",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "provider",
+      "icon": "network-server-symbolic",
+      "summary": "KoboldCpp on the map: found, installed, started and stopped here, its models",
+      "description": "Teaches Asterism the local LLM KoboldCpp: how to find it and its models, start and stop it, connect agents to it, and install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "provider",
+        "installer"
+      ],
+      "reads": [
+        "KoboldCpp's model folders and its own settings"
+      ],
+      "detect": {
+        "commands": [
+          "koboldcpp"
+        ],
+        "paths": []
+      },
+      "homepage": "https://github.com/LostRuins/koboldcpp",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "koboldcpp"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-koboldcpp-0.9.0/llm-koboldcpp-0.9.0.zip",
+      "size": 1711,
+      "sha256": "5d08fd210908df921d55af89484e6a54e2a7555da26b6c368bd18dac2058de76"
+    },
+    {
+      "id": "llm-llamacpp",
+      "name": "llama.cpp",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "provider",
+      "icon": "network-server-symbolic",
+      "summary": "llama.cpp on the map: found, installed, started and stopped here, its models",
+      "description": "Teaches Asterism the local LLM llama.cpp: how to find it and its models, start and stop it, connect agents to it, and install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "provider",
+        "installer"
+      ],
+      "reads": [
+        "llama.cpp's model folders and its own settings"
+      ],
+      "detect": {
+        "commands": [
+          "llama-server"
+        ],
+        "paths": []
+      },
+      "homepage": "https://github.com/ggml-org/llama.cpp",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "llamacpp"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-llamacpp-0.9.0/llm-llamacpp-0.9.0.zip",
+      "size": 1576,
+      "sha256": "7b489e01937e20989a25bddba16d6679c36da061d72deff9a1bff30011a81883"
+    },
+    {
+      "id": "llm-lmstudio",
+      "name": "LM Studio",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "provider",
+      "icon": "network-server-symbolic",
+      "summary": "LM Studio on the map: found, installed, started and stopped here, its models",
+      "description": "Teaches Asterism the local LLM LM Studio: how to find it and its models, start and stop it, connect agents to it, and install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "provider",
+        "installer"
+      ],
+      "reads": [
+        "LM Studio's model folders and its own settings"
+      ],
+      "detect": {
+        "commands": [
+          "lms"
+        ],
+        "paths": [
+          "~/.lmstudio"
+        ]
+      },
+      "homepage": "https://lmstudio.ai",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "lmstudio"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-lmstudio-0.9.0/llm-lmstudio-0.9.0.zip",
+      "size": 1581,
+      "sha256": "29697f484862d5f5fda9a04a40bf04c5062ac7394f271932905d4015bcc6c63d"
+    },
+    {
+      "id": "llm-ollama",
+      "name": "Ollama",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "provider",
+      "icon": "network-server-symbolic",
+      "summary": "Ollama on the map: found, installed, started and stopped here, its models",
+      "description": "Teaches Asterism the local LLM Ollama: how to find it and its models, start and stop it, connect agents to it, and install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "provider",
+        "installer"
+      ],
+      "reads": [
+        "Ollama's model folders and its own settings"
+      ],
+      "detect": {
+        "commands": [
+          "ollama"
+        ],
+        "paths": [
+          "~/.ollama"
+        ]
+      },
+      "homepage": "https://ollama.com",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "ollama"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-ollama-0.9.0/llm-ollama-0.9.0.zip",
+      "size": 1548,
+      "sha256": "eb0de3b6ac20a18554063577819c695d05ef952485a4b7834d0e96c568974760"
+    },
+    {
+      "id": "llm-vllm",
+      "name": "vLLM",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "provider",
+      "icon": "network-server-symbolic",
+      "summary": "vLLM on the map: found, installed, started and stopped here, its models",
+      "description": "Teaches Asterism the local LLM vLLM: how to find it and its models, start and stop it, connect agents to it, and install or remove it.",
+      "privacy": "numbers",
+      "capabilities": [
+        "provider",
+        "installer"
+      ],
+      "reads": [
+        "vLLM's model folders and its own settings"
+      ],
+      "detect": {
+        "commands": [
+          "vllm"
+        ],
+        "paths": []
+      },
+      "homepage": "https://docs.vllm.ai",
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "vllm"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-vllm-0.9.0/llm-vllm-0.9.0.zip",
+      "size": 1493,
+      "sha256": "663c6d247f9687288894a444cc93c885e5bce07392c8d5c6c744b0d7e037241a"
+    },
+    {
+      "id": "providers-online",
+      "name": "Online providers",
+      "version": "0.9.0",
+      "api": 1,
+      "kind": "provider",
+      "icon": "network-workgroup-symbolic",
+      "summary": "The online providers agents use, by name on the map",
+      "description": "Names the online providers in agent settings and on the map: Anthropic, OpenAI, GitHub Copilot, Cursor, Google, xAI, Meta, OpenClaw, Nous Research, OpenRouter, Groq, Mistral, DeepSeek, Fireworks, Together AI, OpenCode Zen, Z.ai.",
+      "privacy": "numbers",
+      "capabilities": [
+        "provider"
+      ],
+      "reads": [
+        "Nothing of its own: the agent settings the agent add-ons read"
+      ],
+      "needs": "asterism >= 0.9.0",
+      "provides": [
+        "anthropic",
+        "openai",
+        "github-copilot",
+        "cursor",
+        "google",
+        "xai",
+        "meta",
+        "openclaw",
+        "nous",
+        "openrouter",
+        "groq",
+        "mistral",
+        "deepseek",
+        "fireworks",
+        "together",
+        "opencode-zen",
+        "zai"
+      ],
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/providers-online-0.9.0/providers-online-0.9.0.zip",
+      "size": 1917,
+      "sha256": "720e7a592f2adcb7932de4152d1b1e6d843b6b467eb2d9c299a8217bfb58643e"
     }
   ]
 }
