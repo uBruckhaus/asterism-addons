@@ -1669,7 +1669,7 @@
     {
       "id": "agent-agy",
       "name": "Antigravity CLI",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -1693,18 +1693,18 @@
         "paths": []
       },
       "homepage": "https://antigravity.google",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "agy"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-agy-0.9.0/agent-agy-0.9.0.zip",
-      "size": 1448,
-      "sha256": "44436073e40741c688afb14eb6e29ea9a9cec84f40e682f5ecbc5030becd61fd"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-agy-0.10.0/agent-agy-0.10.0.zip",
+      "size": 1451,
+      "sha256": "5725fdea75e779e9952b4266e72134e86e4add12944d3cd87e34ee070b113364"
     },
     {
       "id": "agent-bionic",
       "name": "LM Studio Bionic",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -1730,18 +1730,18 @@
         ]
       },
       "homepage": "https://lmstudio.ai",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "bionic"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-bionic-0.9.0/agent-bionic-0.9.0.zip",
-      "size": 1647,
-      "sha256": "aa0867bbed61d5fd54619ebe38a2bce66ce000d919b25a4683bb063c14882ead"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-bionic-0.10.0/agent-bionic-0.10.0.zip",
+      "size": 1729,
+      "sha256": "aa7f6a0d9505bf92bbe80751983e1f73fc026d9ba33bba43f547208138a26736"
     },
     {
       "id": "agent-claude",
       "name": "Claude Code",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -1768,18 +1768,18 @@
         ]
       },
       "homepage": "https://github.com/anthropics/claude-code",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "claude"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-claude-0.9.0/agent-claude-0.9.0.zip",
-      "size": 3006,
-      "sha256": "60c6abd4b25cc756e9bdbc85e985b032f03b9fbbcdcfedc9bb38eb98328aabcc"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-claude-0.10.0/agent-claude-0.10.0.zip",
+      "size": 3454,
+      "sha256": "948824e38ad475e60cf7884eac63637a9006ca3b1e92fb6d93c171f5aa7971d4"
     },
     {
       "id": "agent-codex",
       "name": "Codex",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -1804,18 +1804,18 @@
         ]
       },
       "homepage": "https://github.com/openai/codex",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "codex"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-codex-0.9.0/agent-codex-0.9.0.zip",
-      "size": 2605,
-      "sha256": "6a1ee20706b2fb1bd2e8f4ac08a2370e227ed2bc1006204a354da2f6f64ccc59"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-codex-0.10.0/agent-codex-0.10.0.zip",
+      "size": 3001,
+      "sha256": "b8f4d44ee240312a6305bf97d0a45f8007794010b35c05ddf12d5e9f7a7715eb"
     },
     {
       "id": "agent-copilot",
       "name": "GitHub Copilot",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -1840,18 +1840,18 @@
         ]
       },
       "homepage": "https://github.com/github/copilot-cli",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "copilot"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-copilot-0.9.0/agent-copilot-0.9.0.zip",
-      "size": 2049,
-      "sha256": "df6d082f6f927842265c5bc215e8fe7494fd469b3361729832a768b7fb931fd8"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-copilot-0.10.0/agent-copilot-0.10.0.zip",
+      "size": 2181,
+      "sha256": "7b7cfcf72266304f5fa088e8a81be5f30badd7156af12cab342f42b22ee3e273"
     },
     {
       "id": "agent-crush",
       "name": "Crush",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -1877,18 +1877,18 @@
         ]
       },
       "homepage": "https://github.com/charmbracelet/crush",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "crush"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-crush-0.9.0/agent-crush-0.9.0.zip",
-      "size": 1726,
-      "sha256": "b958e2a44a61b3883b83b3bf67422f91e2fe0ab2497066653dee6741bd0444c1"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-crush-0.10.0/agent-crush-0.10.0.zip",
+      "size": 1741,
+      "sha256": "4bcfba761ea9f1be93b37c23d045ad37729e3e312d42b7b877c50d3febaa80ea"
     },
     {
       "id": "agent-cursor-agent",
       "name": "Cursor CLI",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -1914,18 +1914,18 @@
         ]
       },
       "homepage": "https://cursor.com/cli",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "cursor-agent"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-cursor-agent-0.9.0/agent-cursor-agent-0.9.0.zip",
-      "size": 2426,
-      "sha256": "37199cf2a91ac277f1fb049084b979fba26e31a4f5dca7e006e283ca50715539"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-cursor-agent-0.10.0/agent-cursor-agent-0.10.0.zip",
+      "size": 2569,
+      "sha256": "d1815b84a1abced0daa6c3d5a1514559d84dc030b64eef85c1c778cd93a76f77"
     },
     {
       "id": "agent-dsh",
       "name": "DeepSeek Harness",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -1951,18 +1951,18 @@
         ]
       },
       "homepage": "https://www.npmjs.com/package/@deepseek-ai/dsh",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "dsh"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-dsh-0.9.0/agent-dsh-0.9.0.zip",
-      "size": 2182,
-      "sha256": "2a1113874e523323307e5b54b51884321aa2ba071a763c2b7988236289300710"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-dsh-0.10.0/agent-dsh-0.10.0.zip",
+      "size": 2242,
+      "sha256": "841dcc8f96213265bac6024fc191556f07d3d204d3f750005e68c6fdf467f9aa"
     },
     {
       "id": "agent-gemini",
       "name": "Gemini CLI",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -1987,18 +1987,18 @@
         ]
       },
       "homepage": "https://github.com/google-gemini/gemini-cli",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "gemini"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-gemini-0.9.0/agent-gemini-0.9.0.zip",
-      "size": 1732,
-      "sha256": "9b31a6c29e77ed7f48b970b410493884f961e98d56a481b98c6692ad74e81ad0"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-gemini-0.10.0/agent-gemini-0.10.0.zip",
+      "size": 1796,
+      "sha256": "398f42556ed6dcb5f21bede48462cb5df3f9bb7c4a3ba5dbf9cde40fbdb2d7b5"
     },
     {
       "id": "agent-grok",
       "name": "Grok",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -2023,18 +2023,18 @@
         ]
       },
       "homepage": "https://www.npmjs.com/package/@xai-official/grok",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "grok"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-grok-0.9.0/agent-grok-0.9.0.zip",
-      "size": 1603,
-      "sha256": "011f2b0d67ce0c7b688eba150858c1b7fd70c8d51b64783f83377b57203cbdd4"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-grok-0.10.0/agent-grok-0.10.0.zip",
+      "size": 1654,
+      "sha256": "800f5e7e23b7e29b5d1a26b45a6a8ce7f8b2b018ad8fea23474772ae1237626e"
     },
     {
       "id": "agent-hermes",
       "name": "Hermes",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -2059,18 +2059,18 @@
         ]
       },
       "homepage": "https://github.com/NousResearch/hermes-agent",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "hermes"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-hermes-0.9.0/agent-hermes-0.9.0.zip",
-      "size": 5436,
-      "sha256": "37157650030dbdf21ea8982998ed86401a82f562c9666890ad9fefce13c40322"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-hermes-0.10.0/agent-hermes-0.10.0.zip",
+      "size": 5996,
+      "sha256": "5a13069495adbdc7ceb1792b281cb321bc642f3211f1a6af0fed06e9c623bda1"
     },
     {
       "id": "agent-muse",
       "name": "Muse Code",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -2095,18 +2095,18 @@
         ]
       },
       "homepage": "",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "muse"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-muse-0.9.0/agent-muse-0.9.0.zip",
-      "size": 1558,
-      "sha256": "6c283e8ec64695f326cff4fb7e2de242f050f18ed532cbd829875346876716e7"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-muse-0.10.0/agent-muse-0.10.0.zip",
+      "size": 1562,
+      "sha256": "b6d8a5bb426a5cb7d645ba4d0db24082c411a594ba5becb96b0517da04e98a83"
     },
     {
       "id": "agent-omp",
       "name": "Oh My Pi",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -2131,18 +2131,18 @@
         ]
       },
       "homepage": "https://github.com/can1357/oh-my-pi",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "omp"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-omp-0.9.0/agent-omp-0.9.0.zip",
-      "size": 1531,
-      "sha256": "2ac99d6461cc6fb8a1e2a13b1a629994c0817c7944be631ae7de746cd9b8a61b"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-omp-0.10.0/agent-omp-0.10.0.zip",
+      "size": 3483,
+      "sha256": "e04ee026a418b73890412b9dddf22d689ae16a2f6881ce2cab39b027c42be881"
     },
     {
       "id": "agent-openclaw",
       "name": "OpenClaw",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -2167,18 +2167,18 @@
         ]
       },
       "homepage": "https://github.com/openclaw/openclaw",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "openclaw"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-openclaw-0.9.0/agent-openclaw-0.9.0.zip",
-      "size": 2311,
-      "sha256": "4588080e82d7c75cb1b54a0c391878359eb95596b33a2b35ea8559a42b1dc40a"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-openclaw-0.10.0/agent-openclaw-0.10.0.zip",
+      "size": 3607,
+      "sha256": "57a03615491560b6feb2dbc29524d227a5f2657fc281c2788b27bc4214bdd55d"
     },
     {
       "id": "agent-opencode",
       "name": "OpenCode",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -2204,18 +2204,18 @@
         ]
       },
       "homepage": "https://opencode.ai",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "opencode"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-opencode-0.9.0/agent-opencode-0.9.0.zip",
-      "size": 4206,
-      "sha256": "92c6b1760fd7c397504d818ecdf9b8eecf75a2ad574f91f859a34fae97a44598"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-opencode-0.10.0/agent-opencode-0.10.0.zip",
+      "size": 4303,
+      "sha256": "79e37b0538f6f480209b938a1c2101aba258993bef12908420aeebd326e86c49"
     },
     {
       "id": "agent-pi",
       "name": "Pi",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "agent",
       "icon": "system-users-symbolic",
@@ -2240,13 +2240,13 @@
         ]
       },
       "homepage": "https://github.com/badlogic/pi-mono",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "pi"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-pi-0.9.0/agent-pi-0.9.0.zip",
-      "size": 3255,
-      "sha256": "d8cc4e5ba2f0d657933f0e50b5d0bebeaf9beb55c613301b8cb5a6c8d95db56a"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/agent-pi-0.10.0/agent-pi-0.10.0.zip",
+      "size": 3536,
+      "sha256": "992a0afea2e3ff16f20608ec806b11c11a8513521ada25273bb341d8a078df0f"
     },
     {
       "id": "insights",
@@ -2279,7 +2279,7 @@
     {
       "id": "llm-jan",
       "name": "Jan",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "provider",
       "icon": "network-server-symbolic",
@@ -2301,18 +2301,18 @@
         "paths": []
       },
       "homepage": "https://jan.ai",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "jan"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-jan-0.9.0/llm-jan-0.9.0.zip",
-      "size": 1485,
-      "sha256": "07cdc90d2d056df701bb690845e0014307b1c43a26b40a6c22dbe6f1afcc6cf2"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-jan-0.10.0/llm-jan-0.10.0.zip",
+      "size": 2017,
+      "sha256": "0cad187df12a836bde51988d36c64f2b159615a32777c5e3de74900cff9577dd"
     },
     {
       "id": "llm-koboldcpp",
       "name": "KoboldCpp",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "provider",
       "icon": "network-server-symbolic",
@@ -2330,21 +2330,23 @@
         "commands": [
           "koboldcpp"
         ],
-        "paths": []
+        "paths": [
+          "~/.koboldcpp"
+        ]
       },
       "homepage": "https://github.com/LostRuins/koboldcpp",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "koboldcpp"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-koboldcpp-0.9.0/llm-koboldcpp-0.9.0.zip",
-      "size": 1711,
-      "sha256": "5d08fd210908df921d55af89484e6a54e2a7555da26b6c368bd18dac2058de76"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-koboldcpp-0.10.0/llm-koboldcpp-0.10.0.zip",
+      "size": 2574,
+      "sha256": "6a7812676513080c7654d63734535ef68d22d8177880b1a78cce5c4fdb9c53ed"
     },
     {
       "id": "llm-llamacpp",
       "name": "llama.cpp",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "provider",
       "icon": "network-server-symbolic",
@@ -2362,21 +2364,23 @@
         "commands": [
           "llama-server"
         ],
-        "paths": []
+        "paths": [
+          "~/.cache/llama.cpp"
+        ]
       },
       "homepage": "https://github.com/ggml-org/llama.cpp",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "llamacpp"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-llamacpp-0.9.0/llm-llamacpp-0.9.0.zip",
-      "size": 1576,
-      "sha256": "7b489e01937e20989a25bddba16d6679c36da061d72deff9a1bff30011a81883"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-llamacpp-0.10.0/llm-llamacpp-0.10.0.zip",
+      "size": 3606,
+      "sha256": "ee681d76103ae1cc7f2a8a7f62373fd3fc81e624fd70ce6669edca2af89a1a76"
     },
     {
       "id": "llm-lmstudio",
       "name": "LM Studio",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "provider",
       "icon": "network-server-symbolic",
@@ -2399,18 +2403,18 @@
         ]
       },
       "homepage": "https://lmstudio.ai",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "lmstudio"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-lmstudio-0.9.0/llm-lmstudio-0.9.0.zip",
-      "size": 1581,
-      "sha256": "29697f484862d5f5fda9a04a40bf04c5062ac7394f271932905d4015bcc6c63d"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-lmstudio-0.10.0/llm-lmstudio-0.10.0.zip",
+      "size": 4192,
+      "sha256": "c307be12535333497e0ac991fa939231570d2617f2c556617d6e74d745951d96"
     },
     {
       "id": "llm-ollama",
       "name": "Ollama",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "provider",
       "icon": "network-server-symbolic",
@@ -2433,18 +2437,18 @@
         ]
       },
       "homepage": "https://ollama.com",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "ollama"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-ollama-0.9.0/llm-ollama-0.9.0.zip",
-      "size": 1548,
-      "sha256": "eb0de3b6ac20a18554063577819c695d05ef952485a4b7834d0e96c568974760"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-ollama-0.10.0/llm-ollama-0.10.0.zip",
+      "size": 3302,
+      "sha256": "d5372b685bb8bdae573e2f04d82e2e82bd48d4e033134524d8b864cc999babd9"
     },
     {
       "id": "llm-vllm",
       "name": "vLLM",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "provider",
       "icon": "network-server-symbolic",
@@ -2462,21 +2466,23 @@
         "commands": [
           "vllm"
         ],
-        "paths": []
+        "paths": [
+          "~/.cache/vllm"
+        ]
       },
       "homepage": "https://docs.vllm.ai",
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "vllm"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-vllm-0.9.0/llm-vllm-0.9.0.zip",
-      "size": 1493,
-      "sha256": "663c6d247f9687288894a444cc93c885e5bce07392c8d5c6c744b0d7e037241a"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/llm-vllm-0.10.0/llm-vllm-0.10.0.zip",
+      "size": 1897,
+      "sha256": "aa4b9a0832b8883543be2abc13ccffcbbbaacd1e1ad282c670ae193fd05b9bef"
     },
     {
       "id": "providers-online",
       "name": "Online providers",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "api": 1,
       "kind": "provider",
       "icon": "network-workgroup-symbolic",
@@ -2489,7 +2495,7 @@
       "reads": [
         "Nothing of its own: the agent settings the agent add-ons read"
       ],
-      "needs": "asterism >= 0.9.0",
+      "needs": "asterism >= 0.10.0",
       "provides": [
         "anthropic",
         "openai",
@@ -2509,9 +2515,9 @@
         "opencode-zen",
         "zai"
       ],
-      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/providers-online-0.9.0/providers-online-0.9.0.zip",
-      "size": 1917,
-      "sha256": "720e7a592f2adcb7932de4152d1b1e6d843b6b467eb2d9c299a8217bfb58643e"
+      "url": "https://github.com/uBruckhaus/asterism-addons/releases/download/providers-online-0.10.0/providers-online-0.10.0.zip",
+      "size": 2012,
+      "sha256": "fea6b0f7a42121bab74e961a8a29ef58620467a4d607421d2c4cd28312eff958"
     }
   ]
 }
